@@ -2,3 +2,7 @@
 ## EPiServer Files
 ######################
 *License.config
+packages/
+obj/
+bin/
+.vs/

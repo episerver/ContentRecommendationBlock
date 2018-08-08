@@ -1,20 +1,14 @@
-﻿using EPiServer;
-using EPiServer.Personalization.CMS.Model;
-using EPiServer.Personalization.CMS.Recommendation;
-using EPiServer.ServiceLocation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
-using System.Web.Http.Routing;
-using EPiServer.Web.Mvc.Html;
+using EPiServer.Personalization.CMS.Model;
+using EPiServer.Personalization.CMS.Recommendation;
+using EPiServer.ServiceLocation;
 using EPiServer.Web.Routing;
 
-namespace Episerver.Recommendations.SampleBlock
+namespace Episerver.Recommendations.SampleBlock.Services
 {
     public class RecommendationsController : ApiController
     {
@@ -23,7 +17,7 @@ namespace Episerver.Recommendations.SampleBlock
         // POST api/recommendations
         [HttpPost]
         [ActionName("getrecommendations")]
-        public string GetRecommendations(ApiRecommendationReques request)
+        public string GetRecommendations(ApiRecommendationRequest request)
         {
             _recommendationService = ServiceLocator.Current.GetInstance<IRecommendationService>();
 
@@ -58,7 +52,7 @@ namespace Episerver.Recommendations.SampleBlock
         }
     }
 
-    public class ApiRecommendationReques
+    public class ApiRecommendationRequest
     {
         public string contentId { get; set; }
         public string siteId { get; set; }

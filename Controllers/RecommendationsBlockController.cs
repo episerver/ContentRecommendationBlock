@@ -1,14 +1,14 @@
 ﻿using System.Web.Mvc;
-using EPiServer.Web.Routing;
-using EPiServer;
-using EPiServer.Web;
-using EPiServer.Personalization.CMS.Recommendation;
-using EPiServer.Web.Mvc;
-using EPiServer.Core;
-using EPiServer.ServiceLocation;
 using Episerver.Recommendations.SampleBlock.Model;
+using EPiServer;
+using EPiServer.Core;
+using EPiServer.Personalization.CMS.Recommendation;
+using EPiServer.ServiceLocation;
+using EPiServer.Web;
+using EPiServer.Web.Mvc;
+using EPiServer.Web.Routing;
 
-namespace Episerver.Recommendations.SampleBlock
+namespace Episerver.Recommendations.SampleBlock.Controllers
 {
     public class RecommendationsBlockController : BlockController<RecommendationsBlock>
     {
@@ -47,8 +47,5 @@ namespace Episerver.Recommendations.SampleBlock
             
             return PartialView(model);
         }
-
-        
-
     }
 }

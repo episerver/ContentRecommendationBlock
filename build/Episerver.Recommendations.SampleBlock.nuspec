@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>Episerver.Recommendations.SampleBlock</id>
+        <version>1.0.0</version>
+        <title>EPiServer Recommendations SampleBlock</title>
+        <authors>EPiServer</authors>
+        <owners>EPiServer</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Used for multivariate testing of blocks in EPiServer CMS</description>
+        <copyright>Copyright EPiServer 2018</copyright>
+        <releaseNotes>
+        </releaseNotes>
+        <tags>EPiServer Recommendations SampleBlock</tags>
+        <dependencies>
+            <dependency id="EPiServer.CMS.Core" version="[11,12)" />
+            <dependency id="EPiServer.CMS.UI" version="[11,12)" />
+            <dependency id="EPiServer.Personalization.CMS" version="[1.0,2)" />
+            <dependency id="Microsoft.AspNet.WebApi.WebHost" version="[5.2.3,)" />
+        </dependencies>
+    </metadata>
+	<files>
+		<file src="..\bin\Release\Episerver.Recommendations.SampleBlock.dll" target="lib\net461" />
+		<file src="..\Views\RecommendationsBlock\Index.cshtml" target="Content\Views\RecommendationsBlock" />
+		<file src="..\resources\images\ajax-loader-bars.gif" target="Content\resources\images\" />
+	</files>
+</package>
