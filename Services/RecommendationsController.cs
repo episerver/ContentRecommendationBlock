@@ -30,7 +30,7 @@ namespace Episerver.Recommendations.SampleBlock.Services
 
             var context = Request.Properties["MS_HttpContext"] as HttpContextWrapper;
 
-            var task = Task.Run<IEnumerable<RecommendationResult>>(async () => await _recommendationService.Get(context, rRequest));
+            var task = Task.Run(async () => await _recommendationService.Get(context, rRequest));
 
             var recommendationResults = task.Result;
             var htmlResult = new StringBuilder();
