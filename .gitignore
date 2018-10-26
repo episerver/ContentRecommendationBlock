@@ -6,3 +6,4 @@ packages/
 obj/
 bin/
 .vs/
+build/Episerver.Recommendations.SampleBlock.*.nupkg
